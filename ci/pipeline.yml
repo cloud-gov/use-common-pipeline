@@ -5,11 +5,13 @@ jobs:
       trigger: true
     - set_pipeline: self
       file: common-pipelines/go/pipeline.yml
+      vars:
+        src-repo: https://github.com/cloud-gov/use-common-pipelines
 
 resources:
 - name: common-pipelines
   type: git
   source:
     uri: https://github.com/cloud-gov/common-pipelines
-    branch: main
+    branch: testing
     commit_verification_keys: ((cloud-gov-pgp-keys))
