@@ -1,12 +1,10 @@
 jobs:
-- name: set-self
+- name: bootstrap
   plan:
     - get: common-pipelines
       trigger: true
     - set_pipeline: self
       file: common-pipelines/go/pipeline.yml
-      vars:
-        src-repo: https://github.com/cloud-gov/use-common-pipelines
 
 resources:
 - name: common-pipelines
