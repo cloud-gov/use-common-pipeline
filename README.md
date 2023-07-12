@@ -1,6 +1,4 @@
-fly -t ci set-pipeline --pipeline use-common-pipeline --config ci/pipeline.yml
-Unpause pipeline
-Trigger an initial build in Concourse
-Put secrets in Credhub
+# For demo
 
-* [ ] Config file with source-repo? Or pass directly into self-self?
+fly -t ci destroy-pipeline --pipeline use-common-pipeline
+fly -t ci set-pipeline --pipeline use-common-pipeline --config $LANGUAGE/ci/pipeline.yml
