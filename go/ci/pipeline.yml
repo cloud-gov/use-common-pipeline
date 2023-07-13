@@ -1,5 +1,5 @@
 jobs:
-- name: set-self
+- name: bootstrap
   plan:
     - get: common-pipelines
       trigger: true
