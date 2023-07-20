@@ -1,0 +1,2 @@
+oci-build-params:
+  CONTEXT: container
