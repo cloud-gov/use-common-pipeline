@@ -3,8 +3,12 @@ jobs:
   plan:
     - get: common-pipelines
       trigger: true
+    - get: src
+      trigger: false
     - set_pipeline: self
       file: common-pipelines/container/pipeline.yml
+      var_files:
+        - src/container/ci/vars.yml
 
 resources:
 - name: common-pipelines
@@ -12,4 +16,10 @@ resources:
   source:
     uri: https://github.com/cloud-gov/common-pipelines
     branch: usg-audit
+    commit_verification_keys: ((cloud-gov-pgp-keys))
+- name: src
+  type: git
+  source:
+    uri: https://github.com/((src-repo))
+    branch: test-pr
     commit_verification_keys: ((cloud-gov-pgp-keys))
