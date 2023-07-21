@@ -1,1 +1,2 @@
-oci-build-params: {}
+oci-build-params:
+  CONTEXT: container

@@ -3,8 +3,11 @@ jobs:
   plan:
     - get: common-pipelines
       trigger: true
+
+    # The container pipeline loads some vars from the concrete pipeline's repository.
+    # Must get src here so they are available to set_pipeline below.
     - get: src
-      trigger: false
+
     - set_pipeline: self
       file: common-pipelines/container/pipeline.yml
       var_files:
@@ -17,6 +20,7 @@ resources:
     uri: https://github.com/cloud-gov/common-pipelines
     branch: usg-audit
     commit_verification_keys: ((cloud-gov-pgp-keys))
+
 - name: src
   type: git
   source:
