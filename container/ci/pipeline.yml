@@ -11,5 +11,5 @@ resources:
   type: git
   source:
     uri: https://github.com/cloud-gov/common-pipelines
-    branch: container-pipeline
+    branch: usg-audit
     commit_verification_keys: ((cloud-gov-pgp-keys))
