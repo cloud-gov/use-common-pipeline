@@ -1,2 +1,2 @@
 oci-build-params:
-  CONTEXT: container
+  CONTEXT: src/container
