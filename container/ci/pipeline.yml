@@ -17,7 +17,7 @@ resources:
   type: git
   source:
     uri: https://github.com/cloud-gov/common-pipelines
-    branch: cve-scan
+    branch: main-pipeline
     commit_verification_keys: ((cloud-gov-pgp-keys))
 
 - name: src
