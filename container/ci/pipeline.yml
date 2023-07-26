@@ -17,7 +17,7 @@ resources:
   type: git
   source:
     uri: https://github.com/cloud-gov/common-pipelines
-    branch: usg-audit
+    branch: cve-scan
     commit_verification_keys: ((cloud-gov-pgp-keys))
 
 - name: src
